@@ -4,20 +4,20 @@ const Home = props => {
   return (
     <>
       <div
-        class={`p-5 mb-4 bg-light rounded-3 bg-${
+        className={`p-5 mb-4 bg-light rounded-3 bg-${
           props.obj.theme.darkTheme === false ? "light" : "dark"
         }`}
       >
-        <div class="container-fluid py-5">
+        <div className="container-fluid py-5">
           <h1
-            class={`display-5 fw-bold text-${
+            className={`display-5 fw-bold text-${
               props.obj.theme.darkTheme === false ? "dark" : "light"
             }`}
           >
             Darkight
           </h1>
           <p
-            class={`col-md-8 fs-4 text text-${
+            className={`col-md-8 fs-4 text text-${
               props.obj.theme.darkTheme === false ? "dark" : "light"
             }`}
           >

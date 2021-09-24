@@ -11,7 +11,7 @@ const About = props => {
       >
         <h1 className="text-primary mt-5">About Darkight</h1>
         <p
-          class={`fs-5 col-md-8 text-${
+          className={`fs-5 col-md-8 text-${
             props.obj.theme.darkTheme === false ? "dark" : "light"
           }`}
         >
@@ -21,18 +21,18 @@ const About = props => {
           text to make the content larger.
         </p>
 
-        <div class="mb-5">
-          <Link to="/" class="btn btn-primary btn-lg px-4">
+        <div className="mb-5">
+          <Link to="/" className="btn btn-primary btn-lg px-4">
             Home
           </Link>
         </div>
 
-        <hr class="col-3 col-md-2 mb-5" />
+        <hr className="col-3 col-md-2 mb-5" />
 
-        <div class="row g-5">
-          <div class="col-md-6">
+        <div className="row g-5">
+          <div className="col-md-6">
             <h2
-              class={`text-${
+              className={`text-${
                 props.obj.theme.darkTheme === false ? "dark" : "light"
               }`}
             >
@@ -49,7 +49,7 @@ const About = props => {
             </p>
           </div>
 
-          <div class="col-md-6">
+          <div className="col-md-6">
             <h2
               className={`text-${
                 props.obj.theme.darkTheme === false ? "dark" : "light"
