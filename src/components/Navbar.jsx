@@ -2,21 +2,16 @@ import React, {useContext} from "react";
 import {useEffect} from "react";
 import darkContext from "../context/DarkContext";
 
-const Navbar = () => {
+const Navbar = props => {
   const dark = useContext(darkContext);
   useEffect(() => {}, []);
-
-  const handleClick = () => {
-    dark.switchTheme();
-    console.log("The theme has changed.");
-  };
 
   return (
     <>
       <nav
         className={`navbar navbar-expand-lg navbar-${
-          dark.theme.darkTheme === false ? "light" : "dark"
-        } bg-${dark.theme.darkTheme === false ? "light" : "dark"}`}
+          props.obj.theme.darkTheme === false ? "light" : "dark"
+        } bg-${props.obj.theme.darkTheme === false ? "light" : "dark"}`}
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
@@ -48,12 +43,12 @@ const Navbar = () => {
             </ul>
           </div>
           <button
-            onClick={handleClick}
+            onClick={props.click}
             className={`btn btn-${
-              dark.theme.darkTheme === false ? "dark" : "light"
+              props.obj.theme.darkTheme === false ? "dark" : "light"
             }`}
           >
-            {dark.theme.darkTheme === false ? "Dark Theme" : "Light Theme"}
+            {props.obj.theme.darkTheme === false ? "Dark Theme" : "Light Theme"}
           </button>
         </div>
       </nav>
