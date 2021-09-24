@@ -26,7 +26,7 @@ const Home = props => {
           </p>
           <button
             onClick={props.click}
-            className={`btn btn-${
+            className={`btn btn-lg btn-${
               props.obj.theme.darkTheme === false ? "dark" : "light"
             }`}
           >
